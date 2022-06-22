@@ -20,3 +20,14 @@ function repeatString(n, txt) {
   return newTxt;
 }
 console.log(repeatString(3, "hello"));
+
+function addFirst(element) {
+    return (array) => {
+        array.unshift(element);
+        const newArray = array;
+        return newArray
+    }
+}
+
+const addOrange = addFirst('orange');
+console.log(addOrange(['red', 'blue', 'green']));
