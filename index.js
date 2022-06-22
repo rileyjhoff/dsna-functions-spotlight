@@ -11,14 +11,14 @@ function map(arr, callback) {
 console.log(map([1, 6, 5], (num) => num ** 2));
 
 function repeatString(n, txt) {
-  let newTxt = '';
+  let newTxt = "";
   for (let i = 0; i < n; i++) {
     newTxt = newTxt.concat(txt);
   }
   return newTxt;
 }
 
-console.log(repeatString(3, 'hello'));
+console.log(repeatString(3, "hello"));
 
 function addFirst(element) {
   return (array) => {
@@ -28,8 +28,8 @@ function addFirst(element) {
   };
 }
 
-const addOrange = addFirst('orange');
-console.log(addOrange(['red', 'blue', 'green']));
+const addOrange = addFirst("orange");
+console.log(addOrange(["red", "blue", "green"]));
 
 function addPunctuation(punctuation) {
   return (string) => {
@@ -37,5 +37,19 @@ function addPunctuation(punctuation) {
   };
 }
 
-const addExcitement = addPunctuation('!!!');
-console.log(addExcitement('Hello World'));
+const addExcitement = addPunctuation("!!!");
+console.log(addExcitement("Hello World"));
+
+function fib(n) {
+  if (n === 0) {
+    return 0;
+  }
+  if (n === 1) {
+    return 1;
+  }
+  if (n > 1) {
+    return fib(n - 1) + fib(n - 2);
+  }
+}
+
+console.log(fib(2));
