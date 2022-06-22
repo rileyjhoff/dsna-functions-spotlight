@@ -11,3 +11,12 @@ function map(arr, callback) {
 const myArray = [1, 6, 5];
 const newArray = map(myArray, (num) => num ** 2);
 console.log(newArray);
+
+function repeatString(n, txt) {
+  let newTxt = "";
+  for (let i = 0; i < n; i++) {
+    newTxt = newTxt.concat(txt);
+  }
+  return newTxt;
+}
+console.log(repeatString(3, "hello"));
