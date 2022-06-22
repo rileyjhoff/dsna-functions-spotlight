@@ -8,26 +8,34 @@ function map(arr, callback) {
   return newArr;
 }
 
-const myArray = [1, 6, 5];
-const newArray = map(myArray, (num) => num ** 2);
-console.log(newArray);
+console.log(map([1, 6, 5], (num) => num ** 2));
 
 function repeatString(n, txt) {
-  let newTxt = "";
+  let newTxt = '';
   for (let i = 0; i < n; i++) {
     newTxt = newTxt.concat(txt);
   }
   return newTxt;
 }
-console.log(repeatString(3, "hello"));
+
+console.log(repeatString(3, 'hello'));
 
 function addFirst(element) {
-    return (array) => {
-        array.unshift(element);
-        const newArray = array;
-        return newArray
-    }
+  return (array) => {
+    array.unshift(element);
+    const newArray = array;
+    return newArray;
+  };
 }
 
 const addOrange = addFirst('orange');
 console.log(addOrange(['red', 'blue', 'green']));
+
+function addPunctuation(punctuation) {
+  return (string) => {
+    return string + punctuation;
+  };
+}
+
+const addExcitement = addPunctuation('!!!');
+console.log(addExcitement('Hello World'));
